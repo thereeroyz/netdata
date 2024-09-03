@@ -330,7 +330,7 @@ jobs:
           submodules: recursive
       - name: Fetch test environment
         id: fetch
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4.1.7
         with:
           name: ${{ matrix.artifact_key }}-test-env
       - name: Load test environment
@@ -408,7 +408,7 @@ jobs:
         uses: actions/checkout@v3
       - name: Fetch dist tarball artifacts
         id: fetch-tarball
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4.1.7
         with:
           name: dist-tarball
           path: dist-tarball
@@ -424,7 +424,7 @@ jobs:
           cat sha256sums.txt
       - name: Fetch test environment
         id: fetch-test-environment
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4.1.7
         with:
           name: ${{ matrix.artifact_key }}-test-env
       - name: Load test environment
@@ -475,13 +475,13 @@ jobs:
         run: mkdir -p artifacts
       - name: Retrieve Dist Tarball
         id: fetch-dist
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4.1.7
         with:
           name: dist-tarball
           path: dist-tarball
       - name: Retrieve Static Build Artifacts
         id: fetch-static
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4.1.7
         with:
           name: static-archive
           path: static-archive
@@ -545,7 +545,7 @@ jobs:
         uses: actions/checkout@v3
       - name: Fetch artifacts
         id: fetch
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4.1.7
         with:
           name: final-artifacts
           path: artifacts
@@ -599,7 +599,7 @@ jobs:
         uses: actions/checkout@v3
       - name: Fetch artifacts
         id: fetch-artifacts
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4.1.7
         with:
           name: final-artifacts
           path: artifacts
@@ -645,7 +645,7 @@ jobs:
     steps:
       - name: Retrieve Artifacts
         id: fetch
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4.1.7
         with:
           name: final-artifacts
           path: final-artifacts
@@ -710,7 +710,7 @@ jobs:
           token: ${{ secrets.NETDATABOT_GITHUB_TOKEN }}
       - name: Retrieve Artifacts
         id: fetch
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4.1.7
         with:
           name: final-artifacts
           path: final-artifacts
@@ -787,7 +787,7 @@ jobs:
         uses: actions/checkout@v3
       - name: Retrieve Artifacts
         id: fetch
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4.1.7
         with:
           name: final-artifacts
           path: final-artifacts
